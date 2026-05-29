@@ -4,6 +4,23 @@ A Streamlit app that lets you upload any PDF and chat with it using Retrieval-Au
 
 ---
 
+## Demo
+
+| Upload Screen | Chat + Citations |
+|---|---|
+| ![Upload](screenshots/upload.png) | ![Chat](screenshots/chat.png) |
+
+---
+
+## Prompt Logs
+
+AI assistant (Claude Code) was used throughout development. Conversation screenshots are in [`prompt_logs/`](prompt_logs/) covering:
+- Initial architecture planning
+- Debugging Streamlit session state and ChromaDB issues
+- Building the eval script and model comparison
+
+---
+
 ## Setup
 
 ### 1. Clone & install
