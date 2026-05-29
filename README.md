@@ -6,9 +6,9 @@ A Streamlit app that lets you upload any PDF and chat with it using Retrieval-Au
 
 ## Demo
 
-| Upload Screen | Chat + Citations |
+| Upload Screen | Citations & Follow-ups |
 |---|---|
-| ![Upload](screenshots/upload.png) | ![Chat](screenshots/chat.png) |
+| ![Upload](screenshots/Screenshot%202026-05-29%20at%2011.47.48%20AM.png) | ![Citations](screenshots/Screenshot%202026-05-29%20at%2011.43.57%20AM.png) |
 
 ---
 
