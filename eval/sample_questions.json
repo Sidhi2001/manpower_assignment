@@ -1,0 +1,47 @@
+[
+  {
+    "question": "What is the main contribution introduced in this paper?",
+    "expected": "The Transformer architecture based entirely on attention mechanisms without recurrence or convolution.",
+    "type": "factual"
+  },
+  {
+    "question": "Why does the Transformer avoid recurrence?",
+    "expected": "To allow parallelization during training and better handling of long-range dependencies.",
+    "type": "factual"
+  },
+  {
+    "question": "What is self-attention and how does it work?",
+    "expected": "A mechanism where each token attends to all other tokens in the sequence to build contextual representations.",
+    "type": "conceptual"
+  },
+  {
+    "question": "What is multi-head attention and why is it useful?",
+    "expected": "Multiple attention heads learn different relationships in parallel across different representation subspaces.",
+    "type": "conceptual"
+  },
+  {
+    "question": "What datasets were used for the translation experiments?",
+    "expected": "WMT 2014 English-German and English-French translation datasets.",
+    "type": "factual"
+  },
+  {
+    "question": "What optimizer and learning rate strategy were used during training?",
+    "expected": "Adam optimizer with a warmup-then-decay learning rate schedule.",
+    "type": "factual"
+  },
+  {
+    "question": "What BLEU score did the Transformer achieve on English-to-German translation?",
+    "expected": "28.4 BLEU, which was state-of-the-art at the time of publication.",
+    "type": "factual"
+  },
+  {
+    "question": "Why is positional encoding needed if recurrence is removed?",
+    "expected": "Without recurrence the model has no sense of token order so positional encodings inject sequence position information.",
+    "type": "follow_up"
+  },
+  {
+    "question": "How does the encoder-decoder attention differ from self-attention in the Transformer?",
+    "expected": "Encoder-decoder attention queries come from the decoder while keys and values come from the encoder output, allowing the decoder to attend over the full input sequence.",
+    "type": "follow_up"
+  }
+]
