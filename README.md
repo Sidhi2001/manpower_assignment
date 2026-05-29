@@ -9,7 +9,7 @@ A Streamlit app that lets you upload any PDF and chat with it using Retrieval-Au
 ### 1. Clone & install
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Sidhi2001/manpower_assignment
 cd manpower_assignment_sidhi
 pip install -r requirements.txt
 ```
@@ -18,7 +18,8 @@ pip install -r requirements.txt
 
 ```bash
 cp .env.example .env
-# Edit .env and paste your Groq API key (free at console.groq.com)
+# Paste your Groq API key — free, no credit card, takes 30 seconds
+# Get one at: https://console.groq.com/keys
 GROQ_API_KEY=gsk_...
 ```
 
