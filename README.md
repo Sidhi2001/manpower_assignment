@@ -109,34 +109,18 @@ streamlit run app.py
 
 ---
 
-## Evaluation (Bonus)
+## Evaluation 
 
-Run the eval script against any PDF with a question set:
+Ran 9 technical questions against **Attention Is All You Need** using a custom eval script (`eval/evaluate.py`). Questions cover factual recall, conceptual understanding, and follow-up reasoning. Each answer is auto-scored using keyword overlap against an expected answer (0 = wrong, 1 = partial, 2 = correct). Results saved to CSV.
 
-```bash
-# Single model
-python eval/evaluate.py --pdf path/to/document.pdf --questions eval/sample_questions.json
+Tested two models to compare answer quality:
 
-# Compare multiple models side by side
-python eval/evaluate.py --pdf path/to/document.pdf --questions eval/sample_questions.json \
-    --models llama-3.1-8b-instant llama-3.3-70b-versatile
-```
-
-Questions are defined in JSON as `{ "question", "expected", "type" }` objects. The script auto-scores each answer using keyword overlap against the expected answer (0 = wrong, 1 = partial, 2 = correct) and saves results to a CSV.
-
-### Model Comparison — Attention Is All You Need (9 questions)
-
-| Model | Avg Score | % Correct | Score 2s | Score 1s | Score 0s |
-|-------|-----------|-----------|----------|----------|----------|
+| Model | Avg Score | % Correct | Fully Correct | Partial | Wrong |
+|-------|-----------|-----------|---------------|---------|-------|
 | `llama-3.1-8b-instant` | 1.67 / 2 | 83% | 7 | 1 | 1 |
 | `llama-3.3-70b-versatile` | **1.78 / 2** | **89%** | 7 | 2 | **0** |
 
-**Key takeaways:**
-- The 70B model eliminates all wrong answers (0 scores) vs the 8B model
-- Both models perform similarly on factual recall; the 70B model is stronger on conceptual and follow-up questions
-- Scorer uses stemmed keyword overlap — answers that are correct but phrased differently may show as partial (1); manual review of the CSV is recommended for borderline cases
-
-To switch models, set `LLM_MODEL` in `.env` — no code changes needed.
+The 70B model produced zero wrong answers and handled follow-up and conceptual questions better. The app uses `llama-3.3-70b-versatile` by default. Model is configurable via `LLM_MODEL` in `.env`.
 
 ---
 
